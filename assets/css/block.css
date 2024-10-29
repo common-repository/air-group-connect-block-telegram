@@ -1,0 +1,134 @@
+.air-telegramm > a {
+    border-radius: 5px;
+    max-width: 500px;
+    color: #fff;
+    background: linear-gradient(-45deg, #0080bc, #0f5e8d, #2164c4, #015898);
+    background-size: 400% 400%;
+    animation: tgchannel 15s ease infinite;
+    position: relative;
+    display: grid;
+    grid-template-columns: 5em 1fr;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+    margin: 0 auto;
+    text-decoration: none !important;
+}
+
+.air-telegramm > a:focus,
+.air-telegramm > a:active {
+    color: #fff !important;
+}
+
+.air-telegramm__left img {
+    width: 75px;
+    height: 75px;
+}
+
+.air-telegramm__left {
+    border-radius: 50px;
+}
+
+.air-telegramm__left img {
+    width: 100%;
+    margin:auto;
+}
+
+.air-telegramm__right, .air-telegramm__right h3, .air-telegramm__right p, .site-main .air-telegramm__right h3{
+    color: #fff;
+}
+
+.air-telegramm__left svg {
+    width: 5em;
+    height: 5em;
+}
+
+@keyframes tgchannel {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.air-telegramm__right > p {
+    margin: 0 !important;
+}
+
+.air-tg-show p {
+    opacity: 0;
+    max-height: 35px;
+    animation: air-fade-in 2s ease-in-out forwards;
+    margin: 0 !important;
+}
+
+.air-tg-show-comment .air-telegramm__left{
+    position:relative
+}
+
+.air-telegramm__left:before{
+    content: '';
+    opacity: 0;
+    transform: scaleX(1);
+    transition:0.3s all;
+}
+
+.air-tg-show-comment .air-telegramm__left:before {
+    top: -20px;
+    content: '';
+    width: 50px;
+    background-image: url(../img/typing-texting.gif);
+    height: 50px;
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background-size: contain;
+    right: 55px;
+    transform: scaleX(-1);
+    opacity: 1;
+    animation: air-fade-in-comment 8s ease-in-out infinite;
+}
+
+@keyframes air-fade-in {
+    0% {
+        opacity: 0.3;
+        /*
+        max-height: 35px;
+        */
+    }
+    100% {
+        opacity: 1;
+        /*
+        max-height: 300px;
+        */
+    }
+}
+
+@keyframes air-fade-in-comment {
+    0% {
+        opacity: 0;
+        transform: scaleX(-1);
+    }
+    35% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    37% {
+        opacity: 1;
+        transform: scaleX(-1);
+    }
+    98% {
+        opacity: 1;
+        transform: scaleX(-1);
+    }
+    100% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+}
+

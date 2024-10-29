@@ -1,0 +1,148 @@
+.air-telegramm > a {
+    border-radius: 5px;
+    max-width: 500px;
+    color: #fff;
+    background: linear-gradient(-45deg, #0080bc, #0f5e8d, #2164c4, #015898);
+    background-size: 400% 400%;
+    animation: tgchannel 15s ease infinite;
+    position: relative;
+    display: grid;
+    grid-template-columns: 5em 1fr;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+    margin: 0 auto;
+    text-decoration: none !important;
+}
+
+.air-telegramm > a:focus,
+.air-telegramm > a:active {
+    color: #fff !important;
+}
+
+.air-telegramm__left img {
+    width: 75px;
+    height: 75px;
+}
+
+.air-telegramm__left {
+    border-radius: 50px;
+}
+
+.air-telegramm__left img {
+    width: 100%;
+    margin:auto;
+}
+
+.air-telegramm__right, .air-telegramm__right h3, .air-telegramm__right p {
+    color: #fff;
+}
+
+.air-telegramm__left svg {
+    width: 5em;
+    height: 5em;
+}
+
+@keyframes tgchannel {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.air-telegramm__right > p {
+    margin: 0 !important;
+}
+
+.air-tg-show p {
+    opacity: 0;
+    max-height: 35px;
+    animation: air-fade-in 1.9s ease-in-out forwards;
+    margin: 0 !important;
+}
+
+@keyframes air-fade-in {
+    0% {
+        max-height: 35px;
+    }
+    100% {
+        opacity: 1;
+        max-height: 300px;
+    }
+}
+
+
+
+.wp-block-air-gut-tg-telegram-group a,
+.wp-block-air-gut-tg-telegram-group h3,
+.wp-block-air-gut-tg-telegram-group p,
+.editor-styles-wrapper .block-editor-block-list__layout .air-telegramm__right h3 {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0 10px 0;
+}
+
+.wp-block-air-gut-tg-telegram-group a:hover {
+    color: #ffff;
+    text-decoration: none;
+}
+
+.air-telegramm-phrase {
+    position: relative;
+}
+
+.air-telegramm-phrase button.components-button.is-destructive {
+    position: absolute;
+    top: 0;
+    background: #fff;
+    right: 0;
+    padding: 0 3px;
+    height: 20px;
+    align-items: center;
+    font-size: 12px;
+}
+
+.air-telegramm-phrase button.components-button.is-destructive span {
+    font-size: 12px;
+    height: 12px;
+    width: 12px;
+}
+
+.air-telegramm__left img {
+    width: 100%;
+    margin: auto;
+}
+
+.air-telegramm__icon-edit {
+    background: linear-gradient(-45deg, #0080bc, #0268a4, #2164c4, #045796);
+    background-size: 400% 400%;
+    animation: tgchannel 15s ease infinite;
+    padding: 15px;
+    margin: 0 0 15px 0;
+    border-radius: 0.4em;
+}
+
+.air-telegramm__icon-edit img {
+    width: 100%;
+    height: 100%;
+}
+button.components-button.air-telegramm__Button-edit.is-secondary,
+button.components-button.air-telegramm__Button-edit.is-secondary>span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.air-telegramm__image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.air-telegramm__remove-image {
+    color: red;
+}
